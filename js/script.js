@@ -5,7 +5,7 @@ function toggleActive(tabName) {
 }
 
 function openNav() {
-  var x = window.matchMedia("(max-width: 768px)")
+  var x = window.matchMedia("(max-width: 850px)")
   if (x.matches) { // If media query matches
     document.getElementById("myNav").style.display = "inline-block";
     document.getElementById("myNav").style.width = "100%";
@@ -20,7 +20,7 @@ function openNav() {
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
-  var x = window.matchMedia("(max-width: 768px)")
+  var x = window.matchMedia("(max-width: 850px)")
   if (x.matches) { // If media query matches
     document.getElementById("myNav").style.display = "none";
     document.getElementById("myNav").style.width = "100%";
@@ -34,7 +34,7 @@ function closeNav() {
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNavOnSelect() {
-  var x = window.matchMedia("(max-width: 768px)")
+  var x = window.matchMedia("(max-width: 850px)")
   if (x.matches) { // If media query matches
     document.getElementById("myNav").style.display = "none";
   }
