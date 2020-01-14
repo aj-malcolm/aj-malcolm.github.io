@@ -6,64 +6,78 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/script.js"></script> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="css/desktop.css" rel="stylesheet">
+  <link rel='stylesheet' href='css/universal.css' />
 </head>
 <body>
 
-
-<div class="topnav" id="myTopnav">
-  <a href="#Home" id="home" class='active' onclick="openTab('home')">Home</a>
-  <a href="#About" id="about" onclick="openTab('about')">About</a>
-  <a href="#Skills" id="skills" onclick="openTab('skills')">Skills</a>
-  <a href="#Education" id="education" onclick="openTab('education')">Education</a>
-  <a href="#Experience" id="experience" onclick="openTab('experience')">Experience</a>
-  <a href="#Contact" id="contact" onclick="openTab('contact')">Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="toggleNavMenu(true)"><i class="fa fa-bars"></i></a>
+<div class="nav-menu">
+  <a href="javascript:void(0);" class="icon" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
 
-<div class="header" id="Home">
-  <div class="title">
-    <h1>AJ Malcolm</h1>
-    <h4>Waterloo, Ont · aj.malcolm@outlook.com</h4>
-    <div class="social-icons">
-      <a href="#">
-        <i class="fa fa-linkedin"></i>
-      </a>
-      <a href="#">
-        <i class="fa fa-github"></i>
-      </a>
+<div class="nav-home">
+  <a href="#Home" class="icon">
+    <i class="fa fa-home"></i>
+  </a>
+</div>
+
+<div class="nav-options" id="myNav">
+  <a href="javascript:void(0)" class="nav-options_close-btn" onclick="closeNav()">&times;</a>
+  <div class="nav-options_content">
+    <a href="#Home" id="home" class='nav-options_active' onclick="toggleActive('home')">Home</a>
+    <a href="#About" id="about" onclick="toggleActive('about')">About</a>
+    <a href="#Skills" id="skills" onclick="toggleActive('skills')">Skills</a>
+    <a href="#Education" id="education" onclick="toggleActive('education')">Education</a>
+    <a href="#Experience" id="experience" onclick="toggleActive('experience')">Experience</a>
+    <a href="#Contact" id="contact" onclick="toggleActive('contact')">Contact</a>
+  </div>
+</div>
+
+<div id="main">
+  <div class="header" id="Home">
+    <div class="title">
+      <h1>AJ Malcolm</h1>
+      <h4>Waterloo, Ont · aj.malcolm@outlook.com</h4>
+      <div class="title_icons">
+        <a href="#" class="icon">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="#" class="icon">
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="mainbody">
-  <div class="subpage" id="About">  
-    <h1>About Me</h1>
-  </div>
+  <div class="mainbody" id="main-body">
+    <div class="subpage" id="About">  
+      <h1>About Me</h1>
+    </div>
 
-  <div class="subpage" id="Skills"> 
-    <h1>Skills</h1>
-  </div>
+    <div class="subpage" id="Skills"> 
+      <h1>Skills</h1>
+    </div>
 
-  <div class="subpage" id="Education"> 
-    <h1>Education</h1>
-      <h2>University of Waterloo</h2>
-      <h3>Master of Applied Science - Electrical and Computer Engineering</h3>
-      <p>Specialization in Nanotechnology</p>
-      <br>
-      <br>
-      <h2>Carleton University</h2>
-      <h3>Bachelor of Engineering - Engineering Physics</h3>
-      <p>Senate Medal for Outstanding Academic Achievement</p>
-  </div>
-    
-  <div class="subpage" id="Experience"> 
-    <h1>Experience</h1>
-  </div>
-    
-  <div class="subpage" id="Contact"> 
-    <h1>Contact Me</h1>
+    <div class="subpage" id="Education"> 
+      <h1>Education</h1>
+        <h2>University of Waterloo</h2>
+        <h3>Master of Applied Science - Electrical and Computer Engineering</h3>
+        <p>Specialization in Nanotechnology</p>
+        <br>
+        <br>
+        <h2>Carleton University</h2>
+        <h3>Bachelor of Engineering - Engineering Physics</h3>
+        <p>Senate Medal for Outstanding Academic Achievement</p>
+    </div>
+      
+    <div class="subpage" id="Experience"> 
+      <h1>Experience</h1>
+    </div>
+      
+    <div class="subpage" id="Contact"> 
+      <h1>Contact Me</h1>
+    </div>
   </div>
 </div>
 
