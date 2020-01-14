@@ -1,16 +1,43 @@
 function toggleActive(tabName) {
   $('.active').removeClass('nav-options_active');
   $('#'+tabName).toggleClass('nav-options_active')
-  document.getElementById("myNav").style.display = "none";
+  closeNavOnSelect();
 }
 
 function openNav() {
-  document.getElementById("myNav").style.display = "block";
+  var x = window.matchMedia("(max-width: 768px)")
+  if (x.matches) { // If media query matches
+    document.getElementById("myNav").style.display = "inline-block";
+    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("main").style.marginLeft = "0rem";
+  } else {
+    var width = "20rem"
+    document.getElementById("myNav").style.display = "block";
+    document.getElementById("myNav").style.width = width;
+    document.getElementById("main").style.marginLeft = width;
+  }
 }
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
-  document.getElementById("myNav").style.display = "none";
+  var x = window.matchMedia("(max-width: 768px)")
+  if (x.matches) { // If media query matches
+    document.getElementById("myNav").style.display = "none";
+    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("main").style.marginLeft = "0rem";
+  } else {
+    document.getElementById("myNav").style.display = "block";
+    document.getElementById("myNav").style.width = "0rem";
+    document.getElementById("main").style.marginLeft = "0rem";
+  }
+} 
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNavOnSelect() {
+  var x = window.matchMedia("(max-width: 768px)")
+  if (x.matches) { // If media query matches
+    document.getElementById("myNav").style.display = "none";
+  }
 } 
 
 /* Trigger home icon display when no longer on home screen */
