@@ -16,7 +16,7 @@ body {
 
 .title {
   position: relative;
-  left: 1rem;
+  left: 5vw;
 }
 
 .subpage {
@@ -115,7 +115,7 @@ a.nav-options_close-btn  {
     width: 100%;
     margin: 0rem;
     padding: 0rem;
-    top: 5rem;
+    top: 5vh;
   }
   
   .title h1 {
@@ -154,7 +154,7 @@ a.nav-options_close-btn  {
   }
   
   .title {
-    left: 5rem;
+    left: 5vw;
     top: 10rem;
   }
   

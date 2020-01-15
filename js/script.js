@@ -31,12 +31,3 @@ $(window).on('scroll', function() {
     }
   }
 });
-
-function resetFixedNav(window_size) {
-  if (window_size.matches) {
-    $('#myNav').css('display', 'inline-block')
-  }
-}
-var window_size = window.matchMedia("(min-width: 851px)")
-resetFixedNav(window_size)
-window_size.addListener(resetFixedNav)
