@@ -20,12 +20,20 @@ body {
 }
 
 .subpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   min-height: 100vh;
   margin: 0;
   padding: 1rem;
 }
 
-.subpage h1 {
+.resume-content {
+  padding: 1rem;
+}
+
+.resume-content h3 {
   line-height: 1rem;
 }
 
