@@ -129,15 +129,17 @@ a.nav-options_close-btn  {
   }
 
   .nav-options {
-    width: 100%;
-    opacity: 0;
+    width: 0%;
     transition: width 0s;
-    transition: opacity 0.2s;
+    opacity: 0;
+    transition: opacity 0.1s;
   }
   
   .nav-options.display { 
+    width: 100%;
+    transition: width 0s;
     opacity: 0.9;
-    transition: opacity 0.2s;
+    transition: opacity 0.1s;
   }
 
   @media screen and (orientation: landscape) {
