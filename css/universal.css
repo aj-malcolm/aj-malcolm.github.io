@@ -52,11 +52,12 @@ body {
 
 .nav-options {  
   height: 100%;
+  width: 0%;
   position: fixed;
   z-index: 1;
   overflow-x: hidden; /* Disable horizontal scroll */
-  background-color: rgba(0,0,0, 0.9);
-  transition: 0.25s;
+  background-color: #000000;
+  opacity: 0.9;
 }
 
 /* The navigation links inside the overlay */
@@ -126,10 +127,17 @@ a.nav-options_close-btn  {
     font-size: 1rem;
     margin: 0.5rem;
   }
-  
-  .nav-options { 
-    display: none;
+
+  .nav-options {
     width: 100%;
+    opacity: 0;
+    transition: width 0s;
+    transition: opacity 0.2s;
+  }
+  
+  .nav-options.display { 
+    opacity: 0.9;
+    transition: opacity 0.2s;
   }
 
   @media screen and (orientation: landscape) {
@@ -162,7 +170,6 @@ a.nav-options_close-btn  {
   }
   
   .nav-options {
-    display: block;
     width: 20rem;
   }
 
@@ -180,5 +187,13 @@ a.nav-options_close-btn  {
 
   .icon:hover {
     background-color: #BD5D38;
+  }
+
+  a.nav-options_close-btn {
+    display: none;
+  }
+
+  .nav-menu{
+    display: none;
   }
 }

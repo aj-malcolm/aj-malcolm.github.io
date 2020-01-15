@@ -4,44 +4,22 @@ function toggleActive(tabName) {
   closeNavOnSelect();
 }
 
-function openNav() {
-  var x = window.matchMedia("(max-width: 850px)")
-  if (x.matches) { // If media query matches
-    document.getElementById("myNav").style.display = "inline-block";
-    document.getElementById("myNav").style.width = "100%";
-    document.getElementById("main").style.marginLeft = "0rem";
-  } else {
-    var width = "20rem"
-    document.getElementById("myNav").style.display = "block";
-    document.getElementById("myNav").style.width = width;
-    document.getElementById("main").style.marginLeft = width;
+function toggleNav() {
+  var x =document.getElementById('myNav')
+  var window_size = window.matchMedia("(max-width: 850px)")
+  if (window_size.matches) {
+    if (x.className === 'nav-options') {
+      x.className += ' display';
+    } else {
+      x.className = "nav-options";
+    }
   }
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  var x = window.matchMedia("(max-width: 850px)")
-  if (x.matches) { // If media query matches
-    document.getElementById("myNav").style.display = "none";
-    document.getElementById("myNav").style.width = "100%";
-    document.getElementById("main").style.marginLeft = "0rem";
-  } else {
-    document.getElementById("myNav").style.display = "block";
-    document.getElementById("myNav").style.width = "0rem";
-    document.getElementById("main").style.marginLeft = "0rem";
-  }
-} 
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNavOnSelect() {
-  var x = window.matchMedia("(max-width: 850px)")
-  if (x.matches) { // If media query matches
-    document.getElementById("myNav").style.display = "none";
-  }
-} 
-
 /* Trigger home icon display when no longer on home screen */
 $(window).on('scroll', function() {
+  var mobile = window.matchMedia("(max-width: 850px)")
+  if (mobile.matches) {
     var element_position = ($('#main-body').offset().top) / 1.5;
     var y_scroll_pos = window.pageYOffset;
     var scroll_pos_test = element_position;
@@ -51,4 +29,14 @@ $(window).on('scroll', function() {
     } else {
       $('.nav-home').css('display', 'none')
     }
+  }
 });
+
+function resetFixedNav(window_size) {
+  if (window_size.matches) {
+    $('#myNav').css('display', 'inline-block')
+  }
+}
+var window_size = window.matchMedia("(min-width: 851px)")
+resetFixedNav(window_size)
+window_size.addListener(resetFixedNav)

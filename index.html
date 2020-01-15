@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/script.js"></script> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel='stylesheet' href='css/universal.css' />
 </head>
 <body>
 
 <div class="nav-menu">
-  <a href="javascript:void(0);" class="icon" onclick="openNav()">
+  <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -23,14 +22,14 @@
 </div>
 
 <div class="nav-options" id="myNav">
-  <a href="javascript:void(0)" class="nav-options_close-btn" onclick="closeNav()">&times;</a>
+  <a href="javascript:void(0)" class="nav-options_close-btn" onclick="toggleNav()">&times;</a>
   <div class="nav-options_content">
-    <a href="#Home" id="home" class='nav-options_active' onclick="toggleActive('home')">HOME</a>
-    <a href="#About" id="about" onclick="toggleActive('about')">ABOUT ME</a>
-    <a href="#Skills" id="skills" onclick="toggleActive('skills')">SKILLS</a>
-    <a href="#Projects" id="projects" onclick="toggleActive('projects')">PROJECTS</a>
-    <a href="#Experience" id="experience" onclick="toggleActive('experience')">EXPERIENCE</a>
-    <a href="#Contact" id="contact" onclick="toggleActive('contact')">CONTACT</a>
+    <a href="#Home" id="home" onclick="toggleNav()">HOME</a>
+    <a href="#About" id="about" onclick="toggleNav()">ABOUT ME</a>
+    <a href="#Skills" id="skills" onclick="toggleNav()">SKILLS</a>
+    <a href="#Projects" id="projects" onclick="toggleNav()">PROJECTS</a>
+    <a href="#Experience" id="experience" onclick="toggleNav()">EXPERIENCE</a>
+    <a href="#Contact" id="contact" onclick="toggleNav()">CONTACT</a>
   </div>
 </div>
 
@@ -93,6 +92,7 @@
     </div>
   </div>
 </div>
+<script src="js/script.js"></script> 
 
 </body>
 </html>
