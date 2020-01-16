@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 
   min-height: 100vh;
   margin: 0;
@@ -136,6 +137,10 @@ a.nav-options_close-btn  {
     transition: width 0s;
     opacity: 0.9;
     transition: opacity 0.1s;
+  }
+
+  .nav-home.display {
+    display: block;
   }
 
   @media screen and (orientation: landscape) {
