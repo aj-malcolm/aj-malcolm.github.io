@@ -143,6 +143,10 @@ a.nav-options_close-btn  {
     display: block;
   }
 
+  .tooltip .tooltip_text {
+    visibility: hidden;
+  }
+
   @media screen and (orientation: landscape) {
     .title {
       width: 50%;
@@ -200,5 +204,49 @@ a.nav-options_close-btn  {
 
   .nav-menu{
     display: none;
+  }
+  
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltip_text {
+    visibility: hidden;
+    width: 8rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -2.5rem;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltip_text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333333 transparent transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltip_text {
+    visibility: visible;
+    opacity: 1;
   }
 }
