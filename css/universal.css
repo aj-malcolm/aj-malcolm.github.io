@@ -224,24 +224,24 @@ a.nav-options_close-btn  {
     /* Position the tooltip text */
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    top: 125%;
     left: -2.5rem;
   
     /* Fade in tooltip */
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.2s;
   }
   
   /* Tooltip arrow */
   .tooltip .tooltip_text::after {
     content: "";
     position: absolute;
-    top: 100%;
+    bottom: 100%;
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #333333 transparent transparent transparent;
+    border-color: transparent transparent #333333 transparent;
   }
   
   /* Show the tooltip text when you mouse over the tooltip container */
