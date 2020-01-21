@@ -15,20 +15,8 @@ body {
 }
 
 .title {
-  position: absolute;
-  left: 5vw;
-}
-
-.subpage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
   position: relative;
-
-  min-height: 100vh;
-  margin: 0;
-  padding: 1rem;
+  left: 5vw;
 }
 
 .footer {
@@ -45,18 +33,32 @@ body {
   margin: 0;
 }
 
+.subpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
 .resume-content {
   padding: 1rem;
 }
 
-#home {
+.header {
   background-image: url("../imgs/background.jpg");
+  height: 100vh;
+  width: 100%;
+  /* background-size: 100% auto; */
   overflow: hidden;
 
+  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
 }
 
 .nav-options {  
@@ -97,7 +99,6 @@ a.nav-options_close-btn  {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  z-index: 0;
 }
 
 .nav-home {
@@ -105,7 +106,6 @@ a.nav-options_close-btn  {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  z-index: 0;
 }
 
 .icon {
@@ -314,16 +314,5 @@ a.nav-options_close-btn  {
   .tooltip:hover .tooltip_text {
     visibility: visible;
     opacity: 1;
-  }
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .project_container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1401px) {
-  .project_container {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
