@@ -7,7 +7,10 @@ function changeText(){
 }
 
 function toggleNav() {
-  $('#nav_btn').click()
+  var x = window.matchMedia("(max-width: 850px)")
+  if (x.matches) {
+    $('#nav_btn').click()
+  }
 }
 
 // /* Trigger home icon display when no longer on home screen */
