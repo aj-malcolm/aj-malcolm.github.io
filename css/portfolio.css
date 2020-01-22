@@ -1,0 +1,318 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #333333;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+  margin-left: 0rem;
+  padding: 0px;
+}
+
+.title {
+  position: relative;
+  left: 5vw;
+}
+
+.footer {
+  padding: 1.5rem 0rem;
+  width: 100%; 
+  /* font-size: 1.5rem; */
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  opacity: 0.9;
+}
+
+.footer > h2 {
+  margin: 0;
+}
+
+.subpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+.resume-content {
+  padding: 1rem;
+}
+
+.header {
+  background-image: url("../imgs/background.jpg");
+  height: 100vh;
+  width: 100%;
+  /* background-size: 100% auto; */
+  overflow: hidden;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-options {  
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #000000;
+  opacity: 0.9;
+}
+
+/* The navigation links inside the overlay */
+.nav-options a {
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+a.nav-options_close-btn  {
+  position: absolute;
+  right: 1rem;
+  font-size: 2.5rem;
+}
+
+.nav-options_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.nav-home {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+.icon {
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  background-color: #333333;
+  color: #fff !important;
+  border-radius: 100%;
+  margin: 0.5rem;
+}
+
+.project_container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.project {
+  position:relative;
+  height: 40vh;
+}
+
+.project-image {
+  position: relative;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+  overflow: hidden;
+  filter: grayscale(100%) blur(1px);
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-image:hover {
+  filter: grayscale(0%) blur(0px);
+  transition: .4s ease-in-out;
+}
+
+.project-content {
+  position: absolute;
+  width: 100%;
+  background: black;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 0rem;
+  margin: 0;
+  color: white;
+  bottom: 0;
+  filter: grayscale(0%) blur(0px);
+  text-shadow: 0px 0px 0rem white;
+}
+
+.project_container img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100%; */
+}
+
+@media screen and (max-width: 850px) {
+  .title {
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    top: 5vh;
+  }
+  
+  .title h1 {
+    font-size: 3rem;
+    margin: 0.5rem;
+  }
+  
+  .title h4 {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+
+  .nav-options {
+    width: 0%;
+    transition: width 0s;
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+  
+  .nav-options.display { 
+    width: 100%;
+    transition: width 0s;
+    opacity: 0.9;
+    transition: opacity 0.1s;
+  }
+
+  .nav-home.display {
+    display: block;
+  }
+
+  .tooltip .tooltip_text {
+    visibility: hidden;
+  }
+
+  @media screen and (orientation: landscape) {
+    .title {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 851px) {
+  #main {
+    transition: margin-left .25s;
+    margin-left: 20rem;
+  }
+  
+  .title {
+    left: 5vw;
+    top: 10rem;
+  }
+  
+  .title h1 {
+    font-size: 5rem;
+    margin: 0.5rem;
+    padding: 0rem;
+  }
+  
+  .title h4 {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+  }
+  
+  .nav-options {
+    width: 20rem;
+  }
+
+  .subpage {
+    padding: 3rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .nav-options a {
+    padding: 0.75rem;
+  }
+
+  .nav-options a:hover, .nav-options a:focus {
+    color: #f1f1f1;
+  }
+
+  .icon:hover {
+    background-color: #BD5D38;
+  }
+
+  a.nav-options_close-btn {
+    display: none;
+  }
+
+  .nav-menu{
+    display: none;
+  }
+  
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltip_text {
+    visibility: hidden;
+    width: 8rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: -2.5rem;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltip_text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333333 transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltip_text {
+    visibility: visible;
+    opacity: 1;
+  }
+}

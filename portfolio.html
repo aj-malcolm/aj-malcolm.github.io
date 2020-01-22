@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"> 
+  <link rel='stylesheet' href='css/main.css' />
+</head>
+<body>
+
+  <div class="main_nav">
+    <div class="main_nav-option">
+      <a href="index.html">HOME</a>
+    </div>
+    <div class="main_nav-option active" >
+      <a href="portfolio.html">ABOUT ME</a>
+    </div>
+    <div class="main_nav-option">
+      <a href="projects.html">PROJECTS</a>
+    </div>
+    <div class="main_nav-option">
+      <a href="#">CONTACT</a>
+    </div>
+  </div>
+
+  <div class="sub_nav">
+    <a class="logo" href="index.html">AJ Malcolm</a>
+    <input class="nav_btn" type="checkbox" id="nav_btn" onclick="changeText()">
+    <label class="nav_label" id="nav_label" for="nav_btn">MENU</label>
+
+    <div class="sub_nav-options">
+      <a href="#about">ABOUT ME</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#experience">EXPERIENCE</a>
+    </div>
+  </div>
+
+
+  <div class="subpage" id="about">  
+    <h1>ABOUT ME</h1>
+    <p> What do you get when you turn a Film Studies major into a highly skilled and experienced electrical engineering student/physicist? Me!
+      <br><br>
+      My name is AJ Malcolm, and I am currently completing my MASc in Electrical and Computer Engineering with a specialization in Nanotechnology at the University of Waterloo. 
+      I am a member of both the Institute for Quantum Computing and the Waterloo Institute for Nanotechnology. 
+      I received my Bachelor of Engineering in the distinguished Engineering Physics stream from Carleton University, graduating with the Senate Medal for Outstanding Academic Achievement. 
+      <br><br>
+      I am a quick learner with a wide range of skills, with experience using nanofabrication and metrology tools, strong electronics skills (including circuit simulation, design, and PCB layout), and a high degree of proficiency in Python. 
+      I am a natural leader, being the principal design lead for my capstone engineering project, where we placed third in our department.</p>
+  </div>
+  <hr>
+  <div class="subpage" id="education">  
+    <h1>EDUCATION</h1>
+    <div class="resume-content">
+      <h2>University of Waterloo</h2>
+      <h3>Master of Applied Science - Electrical and Computer Engineering</h3>
+      <p>Expected: August 2020 <br> Specialization in Nanotechnology</p>
+    </div>
+    <div class="resume-content">
+      <h2>Carleton University</h2>
+      <h3>Bachelor of Engineering - Engineering Physics</h3>
+      <p>Received: June 2018 <br> Senate Medal for Outstanding Academic Achievement</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="subpage" id="skills"> 
+    <h1>SKILLS</h1>
+    <a class="icon">
+      <i class="fab fa-python"></i>
+    </a>
+  </div>
+
+  <hr>
+    
+  <div class="subpage" id="experience"> 
+    <h1>EXPERIENCE</h1>
+  </div>
+
+  <script src="js/script.js"></script> 
+
+</body>
+</html>
