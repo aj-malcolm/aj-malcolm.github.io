@@ -13,22 +13,19 @@ a {
   text-decoration: none;
 }
 
-.container {
-  min-height: 100vh;
-  max-height: 100vh;
-  max-width: 100vw;
-  display: flex;
-  flex-direction: column;
+header {
+  min-height: 7vh;
 }
 
-.container .content {
-  order: 1;
-  flex: 1 1 80vh;
-  overflow: auto;
-  width: 100vw;
+main {
+  min-height: 93vh;
 }
 
-.container .main_nav {
+nav {
+  min-height: 7vh;
+}
+
+.main_nav {
   order: 2;
   flex: 0 0 6vh;
   display: flex;
@@ -40,7 +37,7 @@ a {
   height: 6vh;
 }
 
-.container .sub_nav {
+.sub_nav {
   order: 0;
   background-color: #333333;
   max-width: 100vw;
@@ -251,7 +248,7 @@ a {
 }
 
 @media screen and (min-width: 851px) {  
-  .container .main_nav {
+  .main_nav {
     order: -1;
     background-color: rgb(255, 255, 255);
     min-height: 7vh;
@@ -262,7 +259,7 @@ a {
     min-height: 93vh;
   }
 
-  .container .main_nav-option {
+  .main_nav-option {
     height: 100%;
   }
   
@@ -344,7 +341,7 @@ a {
     opacity: 1;
   }
   
-  .container .sub_nav {
+  .sub_nav {
     grid-template-columns: 100vw;
     grid-template-rows: auto;
 
@@ -375,7 +372,7 @@ a {
     font-size: 1rem;
   }
   
-  .container .sub_nav .sub_nav-options {
+  .sub_nav .sub_nav-options {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
