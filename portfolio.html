@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' href='css/minireset.min.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"> 
-  <link rel='stylesheet' href='css/style.css' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'> 
+  <link rel='stylesheet' href='css/style.css'>
 </head>
 <body>
-
+  
   <header>
     <input class="nav_btn" type="checkbox" id="nav_btn" onclick="changeText()">
     <div id="nav_bar">
-      <h1>AJ Malcolm</h1>
+      <h1><a href="index.html">AJ Malcolm</a></h1>
       <label class="nav_label" id="nav_label" for="nav_btn">MENU</label>
     </div>
-
+    
     <nav>
       <ul>
         <li><a href='index.html'>HOME</a></li>
         <li><a href='portfolio.html'>ABOUT ME</a></li>
         <li><a href='projects.html'>PROJECTS</a></li>
-        <li><a href='#'>CONTACT</a></li>
+        <li><a href='contact.html'>CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="portfolio">
-    <section class="subpage" id="about">  
-      <h1>ABOUT ME</h1>
+    <section id="about">  
+      <h2>ABOUT ME</h2>
       <p> What do you get when you turn a Film Studies major into a highly skilled and experienced electrical engineering student/physicist? Me!
         <br><br>
         My name is AJ Malcolm, and I am currently completing my MASc in Electrical and Computer Engineering with a specialization in Nanotechnology at the University of Waterloo. 
@@ -40,33 +40,77 @@
         I am a natural leader, being the principal design lead for my capstone engineering project, where we placed third in our department.</p>
     </section>
     <hr>
-    <section class="subpage" id="education">  
-      <h1>EDUCATION</h1>
+    <section id="education">  
+      <h2>EDUCATION</h2>
       <div class="resume-content">
-        <h2>University of Waterloo</h2>
-        <h3>Master of Applied Science - Electrical and Computer Engineering</h3>
+        <h3>University of Waterloo</h3>
+        <h4>Master of Applied Science - Electrical and Computer Engineering</h4>
         <p>Expected: August 2020 <br> Specialization in Nanotechnology</p>
       </div>
       <div class="resume-content">
-        <h2>Carleton University</h2>
-        <h3>Bachelor of Engineering - Engineering Physics</h3>
+        <h3>Carleton University</h3>
+        <h4>Bachelor of Engineering - Engineering Physics</h4>
         <p>Received: June 2018 <br> Senate Medal for Outstanding Academic Achievement</p>
       </div>
     </section>
 
     <hr>
 
-    <section class="subpage" id="skills"> 
-      <h1>SKILLS</h1>
-      <a class="icon">
-        <i class="fab fa-python"></i>
-      </a>
+    <section id="skills"> 
+      <h2>TECHNICAL SKILLS AND KNOWLEDGE</h2>
+      <h3>General</h3>
+      <ul>
+        <li>Highly proficient in Python with experience using Excel, MATLAB, and Git.</li>
+        <li>Excellent electronic lab experience.</li>
+        <li>Experienced in circuit simulation and design (including schematic creation and PCB design and assembly), including knowledge in RF design considerations and techniques.</li>
+        <li>Experienced in thin film deposition.</li>
+        <li>Broad experience with electrical and optical metrology techniques.</li>
+        <li>Experience and knowledge in device fabrication.</li>
+      </ul>
+
+      <br><br>
+      
+      <h3>Nanofabrication</h3>
+      <ul>
+        <li>JEOL Scanning Electron Microscope</li>
+        <li>BRUKER Atomic Force Microscope</li>
+        <li>J.A. Woollam Ellipsometer</li>
+        <li>AJA Twin-Sputter Chamber (conducting and insulating chambers)</li>
+        <li>Oxford Plasma-Enhanced CVD</li>
+        <li>INTLVAC Electron Beam Evaporator</li>
+        <li>Heidelberg Maskless Aligner UV Direct Write System</li>
+      </ul>
+
     </section>
 
     <hr>
       
-    <section class="subpage" id="experience"> 
-      <h1>EXPERIENCE</h1>
+    <section id="experience"> 
+      <h2>EXPERIENCE</h2>
+      <div class="resume-content">
+        <h3>Hardware Design Engineering Co-op</h3>
+        <h4>Curtiss-Wright Defense Solutions. Ottawa, On.</h4>
+        <p>January 2017 – August 2017</p>
+      </div>
+
+      <div class="resume-content">
+        <h3>Teaching Assistant</h3>
+        <h4>Various classes.</h4>
+        <h4>Department of Electronics, Physics Department. <br> Carleton University. Ottawa, On.</h4>
+        <p>2016 through 2017</p>
+      </div>
+
+      <div class="resume-content">
+        <h3>Student Software Performance Engineering Co-op</h3>
+        <h4>Solutions Engineering, Mitel. Ottawa, On.</h4>
+        <p>May 2015 – December 2015</p>
+      </div>
+
+      <div class="resume-content">
+        <h3>Research Assistant</h3>
+        <h4>Department of Electronics, Carleton University. Ottawa, On.</h4>
+        <p>May 2014 – July 2014</p>
+      </div>
     </section>
   </main>
 
